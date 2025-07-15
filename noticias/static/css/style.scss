@@ -1,0 +1,244 @@
+@import url('https://fonts.cdnfonts.com/css/old-english-five');
+
+$primarycolor: rgb(255, 196, 0);
+$hover: rgb(255, 153, 0);
+$grey: #BDC3C8;
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, sans-serif;
+}
+
+/* configurando o cabeçalho da página */
+header {
+    position: fixed;
+    height: 8vh;
+    background-color: $primarycolor;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    box-shadow: 0px 5px 40px rgb(202, 202, 202);
+    h1 {
+        color: #fff;
+        font-family: 'Old English Five', sans-serif;
+        font-size: 32px;
+    }
+    .navbar {
+        ul {
+            list-style: none;
+            display: flex;
+            color: #fff;
+            li {
+                font-weight: bold;
+                margin-inline: 10px;
+                font-size: 18px;
+                a {
+                    color: #fff;
+                    text-decoration: none;
+                    &:hover {
+                        color: $hover;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* configurando o corpo da página */
+main {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 8vh;
+    min-height: 100vh;
+}
+
+/* configurando CSS da página de listagem de noticias */
+aside.lista {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    .text {
+        margin-block: 20px;
+        font-size: 48px;
+        font-family: 'Old English Five', sans-serif;
+        color: $primarycolor;
+    }
+    .lista-noticias {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;    
+        list-style: none;
+        max-width: 1200px;
+        .noticia {
+            padding-block: 20px;
+            padding-inline: 10px;
+            border-bottom: 1px solid $grey;
+            &:hover {
+                background-color: rgb(247, 247, 247);
+                cursor: pointer;
+            }
+            a {
+                color: #000;
+                text-decoration: none;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .img {
+                    li {
+                        img {
+                            height: 200px;
+                            width: 400px;
+                            object-fit: cover;
+                            border-radius: 0.5rem;
+                        }
+                    }
+                }
+                .content {
+                    margin-left: 30px;
+                    #titulo {
+                        font-size: 42px;
+                        font-weight: bold;
+                        color: $primarycolor;
+                        &:hover {
+                            color: $hover;
+                        }
+                    }
+                    #resumo {
+                        margin-top: 15px;
+                        font-size: 20px;
+                        color: $grey;
+                    }                
+                    .infos {
+                        list-style: none;
+                        display: flex;
+                        margin-top: 15px;
+                        li {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            color: $grey;
+                            font-size: 16px;
+                            margin-right: 8px;
+                            img {
+                                width: 16px;
+                                height: auto;
+                                margin-right: 2px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* configurando CSS da página de leitura de noticias */
+aside.conteudo {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    list-style: none;
+    max-width: 1200px;
+    margin-top: 25px;
+    #img {
+        height: auto;
+        width: 1200px;
+        border-radius: 1rem;
+    }
+    #titulo {
+        font-size: 58px;
+        color: $primarycolor;
+        margin-top: 30px;
+    }
+    #resumo {
+        font-size: 22px;
+        color: $grey;
+        margin-top: 10px;
+        font-weight: normal;
+    }
+    .infos {
+        list-style: none;
+        display: flex;
+        margin-top: 10px;
+        width: 100%;
+        li {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: $grey;
+            margin-right: 10px;
+            img {
+                margin-right: 5px;
+            }
+        }
+    }
+    #conteudo {
+        margin-top: 15px;
+        font-size: 22px;
+        margin-bottom: 100px;
+        &::first-letter {
+            font-size: 54px;
+            font-family: 'Old English Five', sans-serif;
+            margin-left: 25px;
+        }
+        #paragrafo {
+            margin-top: 35px;
+        }
+    }
+}
+
+/* configurando o rodapé da página */
+footer {
+    height: 14vh;
+    background-color: $primarycolor;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 80px;
+    .fcontent {
+        width: 100%;
+        .logo {
+            #logo {
+                color: #fff;
+                font-family: 'Old English Five', sans-serif;
+                font-size: 32px;
+                margin-bottom: 15px;
+            }
+        }
+        hr {
+            background-color: #fff;
+            border: none;
+            height: 2px;
+        }
+        .flista {
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            list-style: none;
+            margin-top: 10px;
+            li {
+                font-weight: bold;
+                margin-inline: 10px;
+                font-size: 18px;
+                color: #fff;
+                a {
+                    color: #fff;
+                    text-decoration: none;
+                    &:hover {
+                        color: $hover;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}

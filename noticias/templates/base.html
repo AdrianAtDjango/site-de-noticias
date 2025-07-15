@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rio Branco Times</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Rio Branco Times</h1>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="{% url 'lista' %}">Voltar para a Home</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block conteudo %}
+        {% endblock %}
+    </main>
+    <footer>
+        <div class="fcontent">
+            <div class="logo">
+                <h1 id="logo">Rio Branco Times</h1>
+            </div>
+            <hr>
+            <ul class="flista">
+                <li>Rio Branco Times &#174; Todos os direitos Reservados</li>
+                <li><a href="{% url 'lista' %}">Voltar para a Home</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block conteudo %}
+<aside class="lista">
+    <h1 class="text">Últimas Notícias</h1>
+    <div class="lista-noticias">
+        {% for noticia in noticias %}
+        <div class="noticia">
+            <a href="{% url 'ler' noticia.id %}">
+                <div class="img">
+                    <li><img src="{{ noticia.capa.url }}" alt=""></li>
+                </div>
+
+                <div class="content">
+                    <li id="titulo">{{ noticia.titulo }}</li>
+                    <li id="resumo">{{ noticia.resumo }}</li>
+                    <ul class="infos">
+                        <li><img src="{% static 'assets/author.svg' %}" alt="">{{ noticia.autor }}</li>
+                        <li><img src="{% static 'assets/time.svg' %}" alt="">{{ noticia.tempo_leitura }} min.</li>
+                        <li><img src="{% static 'assets/calendar.svg' %}" alt="">{{ noticia.data_criacao|date:"d/m/Y" }}</li>
+                    </ul>
+                    </div>
+            </a>
+        </div>
+        {% empty %}
+            <li>Nenhuma Notícia.</li>
+        {% endfor %}
+    </div>
+</aside>
+{% endblock %}

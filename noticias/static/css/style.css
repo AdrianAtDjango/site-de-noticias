@@ -1,0 +1,346 @@
+@charset "UTF-8";
+@import url("https://fonts.cdnfonts.com/css/old-english-five");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica, sans-serif;
+}
+
+/* configurando o cabeçalho da página */
+header {
+  position: fixed;
+  height: 8vh;
+  background-color: #ffc400;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  -webkit-box-shadow: 0px 5px 40px #cacaca;
+          box-shadow: 0px 5px 40px #cacaca;
+}
+
+header h1 {
+  color: #fff;
+  font-family: 'Old English Five', sans-serif;
+  font-size: 32px;
+}
+
+header .navbar ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #fff;
+}
+
+header .navbar ul li {
+  font-weight: bold;
+  margin-inline: 10px;
+  font-size: 18px;
+}
+
+header .navbar ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+header .navbar ul li a:hover {
+  color: #ff9900;
+  cursor: pointer;
+}
+
+/* configurando o corpo da página */
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-top: 8vh;
+  min-height: 100vh;
+}
+
+/* configurando CSS da página de listagem de noticias */
+aside.lista {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+aside.lista .text {
+  margin-block: 20px;
+  font-size: 48px;
+  font-family: 'Old English Five', sans-serif;
+  color: #ffc400;
+}
+
+aside.lista .lista-noticias {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  list-style: none;
+  max-width: 1200px;
+}
+
+aside.lista .lista-noticias .noticia {
+  padding-block: 20px;
+  padding-inline: 10px;
+  border-bottom: 1px solid #BDC3C8;
+}
+
+aside.lista .lista-noticias .noticia:hover {
+  background-color: #f7f7f7;
+  cursor: pointer;
+}
+
+aside.lista .lista-noticias .noticia a {
+  color: #000;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+aside.lista .lista-noticias .noticia a .img li img {
+  height: 200px;
+  width: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+aside.lista .lista-noticias .noticia a .content {
+  margin-left: 30px;
+}
+
+aside.lista .lista-noticias .noticia a .content #titulo {
+  font-size: 42px;
+  font-weight: bold;
+  color: #ffc400;
+}
+
+aside.lista .lista-noticias .noticia a .content #titulo:hover {
+  color: #ff9900;
+}
+
+aside.lista .lista-noticias .noticia a .content #resumo {
+  margin-top: 15px;
+  font-size: 20px;
+  color: #BDC3C8;
+}
+
+aside.lista .lista-noticias .noticia a .content .infos {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 15px;
+}
+
+aside.lista .lista-noticias .noticia a .content .infos li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #BDC3C8;
+  font-size: 16px;
+  margin-right: 8px;
+}
+
+aside.lista .lista-noticias .noticia a .content .infos li img {
+  width: 16px;
+  height: auto;
+  margin-right: 2px;
+}
+
+/* configurando CSS da página de leitura de noticias */
+aside.conteudo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  list-style: none;
+  max-width: 1200px;
+  margin-top: 25px;
+}
+
+aside.conteudo #img {
+  height: auto;
+  width: 1200px;
+  border-radius: 1rem;
+}
+
+aside.conteudo #titulo {
+  font-size: 58px;
+  color: #ffc400;
+  margin-top: 30px;
+}
+
+aside.conteudo #resumo {
+  font-size: 22px;
+  color: #BDC3C8;
+  margin-top: 10px;
+  font-weight: normal;
+}
+
+aside.conteudo .infos {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 10px;
+  width: 100%;
+}
+
+aside.conteudo .infos li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #BDC3C8;
+  margin-right: 10px;
+}
+
+aside.conteudo .infos li img {
+  margin-right: 5px;
+}
+
+aside.conteudo #conteudo {
+  margin-top: 15px;
+  font-size: 22px;
+  margin-bottom: 100px;
+}
+
+aside.conteudo #conteudo::first-letter {
+  font-size: 54px;
+  font-family: 'Old English Five', sans-serif;
+  margin-left: 25px;
+}
+
+aside.conteudo #conteudo #paragrafo {
+  margin-top: 35px;
+}
+
+/* configurando o rodapé da página */
+footer {
+  height: 14vh;
+  background-color: #ffc400;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-inline: 80px;
+}
+
+footer .fcontent {
+  width: 100%;
+}
+
+footer .fcontent .logo #logo {
+  color: #fff;
+  font-family: 'Old English Five', sans-serif;
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+footer .fcontent hr {
+  background-color: #fff;
+  border: none;
+  height: 2px;
+}
+
+footer .fcontent .flista {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+  margin-top: 10px;
+}
+
+footer .fcontent .flista li {
+  font-weight: bold;
+  margin-inline: 10px;
+  font-size: 18px;
+  color: #fff;
+}
+
+footer .fcontent .flista li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer .fcontent .flista li a:hover {
+  color: #ff9900;
+  cursor: pointer;
+}
+/*# sourceMappingURL=style.css.map */
